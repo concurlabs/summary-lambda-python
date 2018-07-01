@@ -10,6 +10,7 @@
 virtualenv -p python2 s
 . s/bin/activate
 pip install -r requirements.txt
+npm install
 sls wsgi serve
 sls invoke local --function summarize --path local.json
 sls logs --function summarize
