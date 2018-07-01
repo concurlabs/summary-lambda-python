@@ -12,7 +12,7 @@ virtualenv -p python2 s
 pip install -r requirements.txt
 npm install
 sls wsgi serve
-sls invoke local --function summarize --path local.json
+sls invoke local --function summarize --path local.json // optional
 sls logs --function summarize
 ```
 
