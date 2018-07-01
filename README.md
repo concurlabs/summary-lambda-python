@@ -6,17 +6,21 @@
 - Docker
 
 ### Develop
-`virtualenv -p python2 s`
-`. s/bin/activate`
-`pip install -r requirements.txt`
-`sls wsgi serve`
-`sls invoke local --function summarize --path local.json`
-`sls logs --function summarize`
+```
+virtualenv -p python2 s
+. s/bin/activate
+pip install -r requirements.txt
+sls wsgi serve
+sls invoke local --function summarize --path local.json
+sls logs --function summarize
+```
 
 ### Deploy
-`pip freeze > requirements.txt`
-`sls deploy`
-`sls invoke --function summarize --path local.json`
+```
+pip freeze > requirements.txt
+sls deploy
+sls invoke --function summarize --path local.json
+```
 
 ### Learnings
 - Used virtualenv over conda because some libraries are not readily accessible via conda, or I wasn't sure how to import them manually with proper versions
